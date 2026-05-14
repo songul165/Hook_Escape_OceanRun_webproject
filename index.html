@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hook Escape - Ocean Run</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="sayfa">
+        <section class="ust-panel">
+            <div>
+                <h1>Hook Escape: Ocean Run</h1>
+                <p class="aciklama">
+                    Balığını seç, okyanusta ilerle, yemleri topla, kancalardan kaç ve yavru balığı koru.
+                    Oyun artık sonsuz koşu mantığında ilerler.
+                </p>
+            </div>
+
+            <div class="kisa-yardim">
+                <span>Hareket: <b>WASD</b> / <b>Yön Tuşları</b></span>
+                <span>Saldırı: <b>Space</b> ile zehir</span>
+                <span>Seçim: <b>← →</b> ve <b>Enter</b></span>
+            </div>
+        </section>
+
+        <section class="bilgi-paneli">
+            <span>Can: <b id="can">3</b></span>
+            <span>Skor: <b id="skor">0</b></span>
+            <span>En Yüksek: <b id="enYuksekSkor">0</b></span>
+            <span>Mesafe: <b id="mesafe">0 m</b></span>
+            <span>Seviye: <b id="seviye">1</b></span>
+            <span>Balık: <b id="balikAdi">Seçilmedi</b></span>
+            <span>Durum: <b id="durum">Balık seç</b></span>
+        </section>
+
+        <div class="oyun-kapsayici">
+            <canvas id="oyunAlani" width="900" height="540"></canvas>
+
+            <div id="secimEkrani" class="secim-ekrani">
+                <div class="secim-kart">
+                    <p class="mini-baslik">Karakter Seçimi</p>
+                    <h2 id="secimBalikAdi">Mavi Balık</h2>
+
+                    <div class="secim-satiri">
+                        <button id="oncekiBalik" class="ok-buton" type="button">‹</button>
+
+                        <div class="balik-onizleme">
+                            <canvas id="balikOnizleme" width="220" height="150"></canvas>
+                        </div>
+
+                        <button id="sonrakiBalik" class="ok-buton" type="button">›</button>
+                    </div>
+
+                    <p id="secimAciklama" class="secim-aciklama">
+                        Dengeli hız ve can. Yeni başlayanlar için güvenli seçim.
+                    </p>
+
+                    <div class="ozellikler">
+                        <span>Hız: <b id="secimHiz">5</b></span>
+                        <span>Can: <b id="secimCan">3</b></span>
+                        <span>Bonus: <b id="secimBonus">Dengeli</b></span>
+                    </div>
+
+                    <button id="balikSecButonu" class="ana-buton" type="button">Bu Balığı Seç ve Başla</button>
+                    <p class="ipucu">Klavyeden sağ/sol ok ile değiştir, Enter ile başlat.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="butonlar ust-butonlar">
+            <button id="oyunuBaslatButonu" type="button">Oyunu Başlat</button>
+            <button id="oyunuDondurButonu" type="button">Dondur</button>
+            <button id="oyunuYenidenBaslatButonu" type="button">Yeniden Başlat</button>
+            <button id="karakterSecButonu" type="button">Balık Seç</button>
+            <button id="muzikButonu" type="button">Müziği Aç</button>
+        </section>
+
+        <section class="gelistirme-paneli">
+            <h3>Bu sürümde eklenenler</h3>
+            <div class="madde-grid">
+                <p>🌊 Daha renkli mercanlı okyanus ve kum tabanlı yeni arka plan</p>
+                <p>🐟 Başlangıçta oklarla balık seçme ekranı</p>
+                <p>🐠 Renkli oyun karakteri stilinde yenilenmiş balık tasarımları</p>
+                <p>♾️ Sonsuz ilerleme, büyük seviye bildirimi ve mesafe sistemi</p>
+                <p>🎵 Butonla açılan basit arka plan müziği</p>
+                <p>✨ Hasar sonrası kısa süreli koruma efekti</p>
+            </div>
+        </section>
+    </main>
+
+    <audio id="arkaMuzik" src="music.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

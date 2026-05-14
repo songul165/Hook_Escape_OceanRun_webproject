@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(157, 226, 255, 0.9), transparent 35%),
+        linear-gradient(135deg, #f2f8ff, #9be0ff 45%, #5e9cff 100%);
+    color: #082b3a;
+}
+
+.sayfa {
+    width: min(1040px, calc(100% - 24px));
+    margin: 18px auto 28px;
+}
+
+.ust-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin: 0 0 6px;
+    color: #064963;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -1px;
+}
+
+.aciklama {
+    max-width: 680px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.kisa-yardim {
+    min-width: 245px;
+    padding: 12px;
+    display: grid;
+    gap: 6px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 30px rgba(12, 80, 105, 0.12);
+    font-size: 14px;
+}
+
+.bilgi-paneli {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin: 10px 0 12px;
+}
+
+.bilgi-paneli span {
+    padding: 10px 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(61, 158, 193, 0.35);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(7, 68, 92, 0.08);
+}
+
+.oyun-kapsayici {
+    position: relative;
+    width: 100%;
+}
+
+#oyunAlani {
+    width: 100%;
+    aspect-ratio: 900 / 540;
+    max-height: 70vh;
+    display: block;
+    border: 5px solid #064963;
+    border-radius: 22px;
+    background: linear-gradient(#5aa5ff, #2c6bcc 52%, #183f90);
+    box-shadow: 0 20px 45px rgba(5, 60, 85, 0.25);
+}
+
+.secim-ekrani {
+    position: absolute;
+    inset: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2), transparent 22%),
+        linear-gradient(180deg, rgba(2, 42, 67, 0.45), rgba(2, 42, 67, 0.78));
+    backdrop-filter: blur(3px);
+}
+
+.secim-ekrani.gizli {
+    display: none;
+}
+
+.secim-kart {
+    width: min(560px, calc(100% - 24px));
+    padding: 24px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, rgba(34, 67, 145, 0.94), rgba(23, 47, 104, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 26px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.mini-baslik {
+    margin: 0;
+    color: #9eeaff;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.secim-kart h2 {
+    margin: 8px 0 16px;
+    font-size: 32px;
+}
+
+.secim-satiri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.ok-buton {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    font-size: 42px;
+    line-height: 1;
+    border-radius: 50%;
+    background: #e9fbff;
+    color: #064963;
+}
+
+.balik-onizleme {
+    width: 240px;
+    height: 165px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.28), transparent 55%),
+        linear-gradient(180deg, rgba(77, 201, 236, 0.42), rgba(11, 104, 139, 0.52));
+    border: 1px solid rgba(255,255,255,0.24);
+}
+
+.secim-aciklama {
+    min-height: 42px;
+    margin: 18px auto 12px;
+    max-width: 420px;
+    line-height: 1.45;
+    color: #dff8ff;
+}
+
+.ozellikler {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.ozellikler span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.butonlar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #075f7e;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 18px rgba(5, 78, 105, 0.18);
+}
+
+button:hover {
+    background: #0b82aa;
+}
+
+.ana-buton {
+    background: #ffcf4a;
+    color: #573f00;
+}
+
+.ana-buton:hover {
+    background: #ffe07b;
+}
+
+.ipucu {
+    margin: 10px 0 0;
+    color: #bfefff;
+    font-size: 13px;
+}
+
+.gelistirme-paneli {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.gelistirme-paneli h3 {
+    margin: 0 0 10px;
+    color: #224596;
+}
+
+.madde-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 14px;
+}
+
+.madde-grid p {
+    margin: 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.65);
+}
+
+@media (max-width: 780px) {
+    .ust-panel {
+        display: block;
+    }
+
+    .kisa-yardim {
+        margin-top: 12px;
+    }
+
+    .bilgi-paneli {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .madde-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secim-kart {
+        padding: 16px;
+    }
+
+    .ok-buton {
+        width: 44px;
+        height: 44px;
+        font-size: 34px;
+    }
+
+    .balik-onizleme {
+        width: 180px;
+        height: 130px;
+    }
+}
+
+
+/* Üst oyun kontrol butonları */
+.ust-butonlar {
+    position: sticky;
+    top: 8px;
+    z-index: 4;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba(223, 248, 255, 0.72);
+    backdrop-filter: blur(6px);
+}
+
+#oyunuDondurButonu.duraklatildi {
+    background: #ffcf4a;
+    color: #573f00;
+}
+
+#karakterSecButonu {
+    background: #6a7cff;
+}
+
+#karakterSecButonu:hover {
+    background: #5365e8;
+}
+
+
+#oyunAlani {
+    background: linear-gradient(#5aa5ff, #2c6bcc 52%, #183f90);
+}
+
+.bilgi-paneli span {
+    font-size: 14px;
+}

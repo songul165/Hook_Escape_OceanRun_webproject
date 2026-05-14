@@ -3,7 +3,7 @@ Web Programlama dersi kapsamında HTML5 Canvas, CSS ve JavaScript kullanılarak 
 ## Canlı Demo
 
 [🎮 Hook Escape: Ocean Run Oyna](https://melikesinar.github.io/Hook_Escape_OceanRun_webproject/)
-# Hook Escape: Ocean Run
+# Hook Escape: Ocean run
 
 Hook Escape: Ocean Run, HTML5 Canvas, CSS ve JavaScript kullanılarak geliştirilmiş 2D bir okyanus kaçış oyunudur. Oyuncu seçtiği balığı kontrol ederek kancalardan kaçar, yemleri toplar, yavru balığı korur ve belirli aralıklarla gelen canavar balığa karşı zehir fırlatarak hayatta kalmaya çalışır.
 
